@@ -3,14 +3,19 @@ qt_add_executable(appBellaVenture
 )
 
 file(GLOB_RECURSE QML_FILES_LIST RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "qml/*.qml")
-
 message("adding qml files ${QML_FILES_LIST}")
+
+file(GLOB_RECURSE PNG_FILES_LIST RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "assets/img/*.png")
+message("adding png files ${PNG_FILES_LIST}")
 
 qt_add_qml_module(appBellaVenture
     URI appBellaVenture
     VERSION 1.0
     QML_FILES
-    ${QML_FILES_LIST}
+        ${QML_FILES_LIST}
+    RESOURCES
+            ${PNG_FILES_LIST}
+    
 )
 
 set_target_properties(appBellaVenture PROPERTIES

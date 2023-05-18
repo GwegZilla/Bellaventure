@@ -2,6 +2,7 @@
 
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QDirIterator>
 
 #include <QLocale>
 #include <QTranslator>
@@ -28,6 +29,11 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.load(url);
+
+    QDirIterator it(":", QDirIterator::Subdirectories);
+    while (it.hasNext()) {
+        qDebug() << it.next();
+    }
 
     return app.exec();
 }

@@ -2,9 +2,8 @@ import QtQuick
 import QtQuick.Controls
 
 Item {
-
-    anchors.fill: parent
     SwipeView {
-        BasePage {}
+        anchors.fill:parent
+        MenuPage {}
     }
 }

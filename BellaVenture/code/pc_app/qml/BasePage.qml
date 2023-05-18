@@ -4,6 +4,9 @@ import QtQuick.Controls
 Page {
     Image {
         id: name
-        source: "file"
+        source: "qrc:/appBellaVenture/assets/img/hex_background.png"
+        sourceSize.width: parent.width
+        sourceSize.height: parent.height
+        anchors.fill: parent
     }
 }

@@ -13,4 +13,8 @@ ApplicationWindow {
     visible: true
 
     title: qsTr("Bellaventure v0.1.0")
+
+    Root {
+        anchors.fill: parent
+    }
 }
