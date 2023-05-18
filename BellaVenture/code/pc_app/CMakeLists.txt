@@ -2,11 +2,15 @@ qt_add_executable(appBellaVenture
     src/main.cpp
 )
 
+file(GLOB_RECURSE QML_FILES_LIST RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "qml/*.qml")
+
+message("adding qml files ${QML_FILES_LIST}")
+
 qt_add_qml_module(appBellaVenture
     URI appBellaVenture
     VERSION 1.0
     QML_FILES
-    qml/main.qml
+    ${QML_FILES_LIST}
 )
 
 set_target_properties(appBellaVenture PROPERTIES
@@ -19,6 +23,7 @@ set_target_properties(appBellaVenture PROPERTIES
 
 target_include_directories( appBellaVenture PUBLIC
     "./include"
+    "./qml"
     "../bellaventurelib")
 
 target_link_libraries(appBellaVenture
