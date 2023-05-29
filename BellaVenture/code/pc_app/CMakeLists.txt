@@ -1,5 +1,15 @@
 qt_add_executable(appBellaVenture
     src/main.cpp
+
+    include/pages/CreationPage.h
+    include/pages/MenuPage.h
+    include/pages/OptionsPage.h
+    include/pages/PlayPage.h
+    
+    src/pages/CreationPage.cpp
+    src/pages/MenuPage.cpp
+    src/pages/OptionsPage.cpp
+    src/pages/PlayPage.cpp
 )
 
 file(GLOB_RECURSE QML_FILES_LIST RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "qml/*.qml")
@@ -14,7 +24,7 @@ qt_add_qml_module(appBellaVenture
     QML_FILES
         ${QML_FILES_LIST}
     RESOURCES
-            ${PNG_FILES_LIST}
+        ${PNG_FILES_LIST}
     
 )
 
@@ -33,7 +43,9 @@ target_include_directories( appBellaVenture PUBLIC
 
 target_link_libraries(appBellaVenture
     PRIVATE
+    Qt6::Core
     Qt6::Quick
+    Qt6::StateMachine
     bellaventurelib)
 
 install(TARGETS appBellaVenture
