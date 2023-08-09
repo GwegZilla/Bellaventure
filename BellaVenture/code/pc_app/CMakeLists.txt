@@ -1,21 +1,9 @@
+file(GLOB_RECURSE FILES
+       ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp
+       ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
+
 qt_add_executable(appBellaVenture
-    src/main.cpp
-
-    include/states/CreationState.h
-    include/states/CooldownState.h
-    include/states/MasterMachine.h
-    include/states/MenuState.h
-    include/states/OptionsState.h
-    include/states/PlayState.h
-    include/states/WarmupState.h
-
-    src/states/CreationState.cpp
-    src/states/CooldownState.cpp
-    src/states/MasterMachine.cpp
-    src/states/MenuState.cpp
-    src/states/OptionsState.cpp
-    src/states/PlayState.cpp
-    src/states/WarmupState.cpp
+    ${FILES}
 )
 
 file(GLOB_RECURSE QML_FILES_LIST RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "qml/*.qml")

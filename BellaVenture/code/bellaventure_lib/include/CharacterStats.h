@@ -1,12 +1,27 @@
+#pragma once
+
+#include "Level.h"
+#include "Gift.h"
+
+#include <QString>
+#include <QMap>
+
 namespace BellaVenture {
 
-    class CharacterStats {
+    struct CharacterStats {
 
-    public :
-        int robustesse;
-        int prestesse;
-        int esprit;
-        int ame;
+        Level m_sturdiness;
+        Level m_swiftness;
+        Level m_mind;
+        Level m_soul;
+
+        Gift m_jack;
+        Gift m_knight;
+        Gift m_queen;
+        Gift m_king;
+        Gift m_ace;
+
+        QMap<QString, Level> m_skills;
     };
 }
 
