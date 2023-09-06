@@ -1,10 +1,14 @@
-#include <QAbstractState>
+#include <QState>
 
-class WarmupState : public QAbstractState {
+class WarmupState : public QState {
 
+    Q_OBJECT
 
 public :
     void onEntry(QEvent *event) override;
     void onExit(QEvent *event) override;
+
+signals:
+    void warmupDone();
 
 };

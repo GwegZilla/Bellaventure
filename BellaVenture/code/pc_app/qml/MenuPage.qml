@@ -4,6 +4,7 @@ import QtQuick.Layouts
 
 BasePage {
     id: root
+    backButtonEnabled : false
     ColumnLayout {
         anchors.centerIn: parent
         spacing: root.height * 0.05
@@ -13,6 +14,10 @@ BasePage {
             text: "Create"
 
             Layout.alignment: Qt.AlignCenter
+
+            onClicked : {
+                _menuPageModel.createButtonClicked();
+            }
         }
         Button {
             id: play

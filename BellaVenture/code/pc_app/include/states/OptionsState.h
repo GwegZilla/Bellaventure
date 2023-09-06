@@ -1,6 +1,6 @@
-#include <QAbstractState>
+#include <QState>
 
-class OptionsState : public QAbstractState {
+class OptionsState : public QState {
 
 
 public :
