@@ -1,6 +1,6 @@
-#include <QAbstractState>
+#include <QState>
 
-class PlayState : public QAbstractState {
+class PlayState : public QState {
 
 
 public :

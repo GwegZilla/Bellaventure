@@ -1,6 +1,6 @@
-#include <QAbstractState>
+#include <QState>
 
-class CooldownState : public QAbstractState {
+class CooldownState : public QState {
 
 
 public :
