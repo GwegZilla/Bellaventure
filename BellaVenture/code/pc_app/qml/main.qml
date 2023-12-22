@@ -7,8 +7,8 @@ ApplicationWindow {
     Universal.theme: Universal.Dark
     Universal.accent: Universal.Violet
 
-    width: 1280
     height: 720
+    width: height * (9/20) // 20:9 ratio
 
     visible: true
 

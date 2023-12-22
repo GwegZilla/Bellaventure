@@ -1,6 +1,7 @@
-#include <QAbstractState>
+#pragma once
+#include <QState>
 
-class OptionsState : public QAbstractState {
+class CooldownState : public QState {
 
 
 public :
