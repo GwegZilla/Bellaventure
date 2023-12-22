@@ -1,3 +1,4 @@
+#pragma once
 #include "CreationState.h"
 #include "CooldownState.h"
 #include "MenuState.h"
@@ -5,10 +6,10 @@
 #include "PlayState.h"
 #include "WarmupState.h"
 
-#include "models/GlobalModel.h"
-#include "models/MenuPageModel.h"
+#include "bellaventure/models/GlobalModel.h"
+#include "bellaventure/models/MenuPageModel.h"
 
-#include "StrongString.h"
+#include "bellaventure/engine/StrongString.h"
 
 #include <QStateMachine>
 

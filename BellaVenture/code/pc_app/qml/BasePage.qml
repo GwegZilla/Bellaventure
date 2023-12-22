@@ -3,11 +3,9 @@ import QtQuick.Controls
 
 Page {
     property alias backButtonEnabled : backButton.enabled
-    Image {
+    Rectangle {
         id: name
-        source: "qrc:/appBellaVenture/assets/img/hex_background.png"
-        sourceSize.width: parent.width
-        sourceSize.height: parent.height
+        color: "darkGrey"
         anchors.fill: parent
         Button {
             id: backButton

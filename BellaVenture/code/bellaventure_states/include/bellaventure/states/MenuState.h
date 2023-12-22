@@ -1,7 +1,8 @@
+#pragma once
 #include <QState>
 
-#include "models/GlobalModel.h"
-#include "models/MenuPageModel.h"
+#include "bellaventure/models/GlobalModel.h"
+#include "bellaventure/models/MenuPageModel.h"
 
 class MenuState : public QState {
 

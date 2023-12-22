@@ -19,9 +19,9 @@ public:
 class GlobalModel : public QObject {
     Q_OBJECT
 
-    Q_PROPERTY (bool isConsoleVisible READ isConsoleVisible WRITE setConsoleVisible NOTIFY isConsoleVisibleChanged);
-    Q_PROPERTY (QString consoleContent READ consoleContent WRITE setConsoleContent NOTIFY consoleContentChanged);
-    Q_PROPERTY (PageId::Id currentPageId READ currentPageId WRITE setCurrentPageId NOTIFY currentPageIdChanged);
+    Q_PROPERTY (bool isConsoleVisible READ isConsoleVisible WRITE setConsoleVisible NOTIFY isConsoleVisibleChanged)
+    Q_PROPERTY (QString consoleContent READ consoleContent WRITE setConsoleContent NOTIFY consoleContentChanged)
+    Q_PROPERTY (PageId::Id currentPageId READ currentPageId WRITE setCurrentPageId NOTIFY currentPageIdChanged)
 
 public:
     bool isConsoleVisible() const;
