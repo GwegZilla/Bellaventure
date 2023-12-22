@@ -31,14 +31,15 @@ target_include_directories( appBellaVenture PUBLIC
     "./qml"
     "./states"
     "./models"
-    "../bellaventurelib")
+    "../bellaventurelib"
+    "../bellaventurestates")
 
 target_link_libraries(appBellaVenture
     PRIVATE
     Qt6::Core
     Qt6::Quick
-    Qt6::StateMachine
-    bellaventurelib)
+    bellaventurelib
+    bellaventurestates)
 
 install(TARGETS appBellaVenture
     BUNDLE DESTINATION .

@@ -6,10 +6,13 @@ qt_add_library(bellaventurelib STATIC
     ${FILES})
 
 target_include_directories (bellaventurelib PUBLIC
-    "include")
+    "./include"
+    "./qml"
+    "./engine"
+    "./models")
 
     
 target_link_libraries(bellaventurelib
-PRIVATE
+PUBLIC
 Qt6::Core
 )

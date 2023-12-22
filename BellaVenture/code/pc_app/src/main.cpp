@@ -1,8 +1,9 @@
-#include "models/GlobalModel.h"
-#include "models/MenuPageModel.h"
-#include "states/MasterMachine.h"
+#include "bellaventure/states/MasterMachine.h"
 
-#include "CharacterStats.h"
+#include "bellaventure/models/GlobalModel.h"
+#include "bellaventure/models/MenuPageModel.h"
+
+#include "bellaventure/engine/CharacterStats.h"
 
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
@@ -31,6 +32,10 @@ int main(int argc, char *argv[])
         }
     }
 
+    // Create models
+    GlobalModel globalModel;
+    MenuPageModel menuPageModel;
+
     QQmlApplicationEngine engine;
     const QUrl url(u"qrc:/appBellaVenture/qml/main.qml"_qs);
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
@@ -39,12 +44,11 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
 
-    // Create models
-    GlobalModel globalModel;
-    MenuPageModel menuPageModel;
-
     // Create logic units
     MasterMachine masterMachine (globalModel, menuPageModel);
+
+    // Register custom QML types
+    qmlRegisterType<PageId>("PageId", 1, 0, "GlobalModel");
 
     // Set context properties
     QQmlContext* context = engine.rootContext(); //view is the QDeclarativeView

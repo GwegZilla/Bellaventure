@@ -1,4 +1,4 @@
-#include "states/CreationState.h"
+#include "bellaventure/states/CreationState.h"
 
 #include <QDebug>
 
@@ -10,5 +10,5 @@ void CreationState::onEntry(QEvent *event)
 
 void CreationState::onExit(QEvent *event)
 {
-    qDebug() << "enter creation state";
+    qDebug() << "exit creation state";
 }

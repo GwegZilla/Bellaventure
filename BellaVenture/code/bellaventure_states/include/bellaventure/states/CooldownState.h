@@ -1,6 +1,7 @@
+#pragma once
 #include <QState>
 
-class PlayState : public QState {
+class CooldownState : public QState {
 
 
 public :

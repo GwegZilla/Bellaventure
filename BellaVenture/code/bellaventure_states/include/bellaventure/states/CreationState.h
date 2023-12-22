@@ -1,4 +1,5 @@
-#include "models/GlobalModel.h"
+#pragma once
+#include "bellaventure/models/GlobalModel.h"
 
 #include <QState>
 
