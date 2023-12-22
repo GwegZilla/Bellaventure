@@ -1,11 +1,13 @@
 import QtQuick
 import QtQuick.Controls
 
+import BVThemes
+
 Page {
     property alias backButtonEnabled : backButton.enabled
     Rectangle {
         id: name
-        color: "darkGrey"
+        color: BVTheme.colors
         anchors.fill: parent
         Button {
             id: backButton

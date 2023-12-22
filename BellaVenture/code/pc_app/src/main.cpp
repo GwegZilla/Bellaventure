@@ -1,9 +1,9 @@
-#include "bellaventure/states/MasterMachine.h"
+#include "bv/states/MasterMachine.h"
 
-#include "bellaventure/models/GlobalModel.h"
-#include "bellaventure/models/MenuPageModel.h"
+#include "bv/models/GlobalModel.h"
+#include "bv/models/MenuPageModel.h"
 
-#include "bellaventure/engine/CharacterStats.h"
+#include "bv/engine/CharacterStats.h"
 
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
@@ -37,6 +37,7 @@ int main(int argc, char *argv[])
     MenuPageModel menuPageModel;
 
     QQmlApplicationEngine engine;
+    engine.addImportPath(":/");
     const QUrl url(u"qrc:/appBellaVenture/qml/main.qml"_qs);
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {

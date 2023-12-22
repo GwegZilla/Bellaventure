@@ -38,8 +38,9 @@ target_link_libraries(appBellaVenture
     PRIVATE
     Qt6::Core
     Qt6::Quick
-    bellaventurelib
-    bellaventurestates)
+    BVEngine
+    BVStates
+    BVThemesplugin)
 
 install(TARGETS appBellaVenture
     BUNDLE DESTINATION .

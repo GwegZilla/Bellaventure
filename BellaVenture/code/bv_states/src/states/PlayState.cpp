@@ -1,4 +1,4 @@
-#include "bellaventure/states/PlayState.h"
+#include "bv/states/PlayState.h"
 
 void PlayState::onEntry(QEvent *event)
 {

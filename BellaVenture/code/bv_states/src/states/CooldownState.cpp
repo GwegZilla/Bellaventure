@@ -1,4 +1,4 @@
-#include "bellaventure/states/CooldownState.h"
+#include "bv/states/CooldownState.h"
 
 void CooldownState::onEntry(QEvent *event)
 {

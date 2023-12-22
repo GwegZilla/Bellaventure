@@ -1,4 +1,4 @@
-#include "bellaventure/models//GlobalModel.h"
+#include "bv/models//GlobalModel.h"
 
 bool GlobalModel::isConsoleVisible() const
 {

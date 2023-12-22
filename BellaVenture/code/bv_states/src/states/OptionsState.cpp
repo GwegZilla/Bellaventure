@@ -1,4 +1,4 @@
-#include "bellaventure/states/OptionsState.h"
+#include "bv/states/OptionsState.h"
 
 void OptionsState::onEntry(QEvent *event)
 {

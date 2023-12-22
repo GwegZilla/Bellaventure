@@ -6,10 +6,10 @@
 #include "PlayState.h"
 #include "WarmupState.h"
 
-#include "bellaventure/models/GlobalModel.h"
-#include "bellaventure/models/MenuPageModel.h"
+#include "bv/models/GlobalModel.h"
+#include "bv/models/MenuPageModel.h"
 
-#include "bellaventure/engine/StrongString.h"
+#include "bv/engine/StrongString.h"
 
 #include <QStateMachine>
 
